@@ -1,7 +1,8 @@
 #pragma once
 #include <string>
+#include "IContainer.hpp"
 
-class Pallet
+class Pallet : public IContainer
 {
     private:
         int itemCount;
@@ -19,4 +20,7 @@ class Pallet
         bool reallocateEmptyPallet(std::string itemName, int itemCapacity);
         bool takeOne();
         bool putOne();
+
+        bool isEmpty() override;
+        bool isFull() override;
 };

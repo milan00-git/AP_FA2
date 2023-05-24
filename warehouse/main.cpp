@@ -1,5 +1,8 @@
 #include <iostream>
+#include "src/include/pallet.hpp"
+#include <string>
 
 int main(void){
-    std::cout << "Hello world" << std::endl;
+    Pallet p = Pallet("brood", 0, 0);
+    std::cout << p.reallocateEmptyPallet("electronica", 5);
 }
