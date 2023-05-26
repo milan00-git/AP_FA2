@@ -3,7 +3,14 @@
 #include <string>
 
 //constructor
-Pallet::Pallet(std::string itemName, int itemCapacity, int itemCount) :
+// Pallet::Pallet(std::string itemName, int itemCapacity, int itemCount) :
+//     itemName(itemName), //verwijzing naar item name, return item name
+//     itemCapacity(itemCapacity),
+//     itemCount(itemCount)
+// {}
+
+//nieuwe constructor voor reorder
+Pallet::Pallet(int itemCount, std::string itemName, int itemCapacity) :
     itemName(itemName), //verwijzing naar item name, return item name
     itemCapacity(itemCapacity),
     itemCount(itemCount)
@@ -21,9 +28,10 @@ int Pallet::getRemainingSpace() {
     return itemCapacity - itemCount; //kijk voor de overgebleven ruimte in een pallet als het nog niet vol zit
 }
 
-bool Pallet::reallocateEmptyPallet(std::string itemName, int itemCapacity) {
+bool Pallet::reallocateEmptyPallet(std::string new_itemName, int new_itemCapacity) {
     if (itemCapacity == 0) { //als er geen items in een pallet inzitten, verander de naam om het te hergebruiken voor andere items
-        itemName = getitemName(); //verander de item name met een andere item name
+        itemName = new_itemName; //verander de item name met een nieuwe item name
+        itemCapacity = new_itemCapacity; //verander de capacity naar die van de nieuwe item
         return true;                     
     }
     else {
@@ -32,12 +40,12 @@ bool Pallet::reallocateEmptyPallet(std::string itemName, int itemCapacity) {
 }
 
 bool Pallet::takeOne() {
-    if (itemCount != 0) { //als er nog items beschikbaar zijn kan je er er een pakken
-        itemCount--;
-        return true; 
+    if (itemCount != 0) { //als er nog items beschikbaar zijn kan je er er een pakken 
+        itemCount--; 
+        return true; //output is 1 
     }
     else {
-        return false; //er zijn geen items meer beschikbaar
+        return false; //er zijn geen items meer beschikbaar output = 0
     }
 }
 
@@ -49,7 +57,6 @@ bool Pallet::putOne() {
     else {
         return false; //itemCapacity zit vol, er kunnen geen items meer bij
     }
-    
 }
 
 bool Pallet::isEmpty() {

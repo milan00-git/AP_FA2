@@ -2,7 +2,7 @@
 #include <string>
 #include "IContainer.hpp"
 
-class Pallet : public IContainer
+class Pallet : public IContainer //inherit public functies van IContainer
 {
     private:
         int itemCount;
@@ -11,7 +11,8 @@ class Pallet : public IContainer
     
     public:
         //constructor
-        Pallet (std::string itemName, int itemCapacity, int itemCount);
+        // Pallet(std::string itemName, int itemCapacity, int itemCount);
+        Pallet(int itemCount, std::string itemName, int itemCapacity); //constructor reordered 
         Pallet();
 
         std::string getitemName();
