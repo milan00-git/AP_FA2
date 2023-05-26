@@ -11,7 +11,6 @@ class Pallet : public IContainer //inherit public functies van IContainer
     
     public:
         //constructor
-        // Pallet(std::string itemName, int itemCapacity, int itemCount);
         Pallet(int itemCount, std::string itemName, int itemCapacity); //constructor reordered 
         Pallet();
 

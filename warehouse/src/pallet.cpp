@@ -2,18 +2,14 @@
 #include "include/pallet.hpp"
 #include <string>
 
-//constructor
-// Pallet::Pallet(std::string itemName, int itemCapacity, int itemCount) :
-//     itemName(itemName), //verwijzing naar item name, return item name
-//     itemCapacity(itemCapacity),
-//     itemCount(itemCount)
-// {}
-
 //nieuwe constructor voor reorder
 Pallet::Pallet(int itemCount, std::string itemName, int itemCapacity) :
     itemName(itemName), //verwijzing naar item name, return item name
     itemCapacity(itemCapacity),
     itemCount(itemCount)
+{}
+
+Pallet::Pallet() //default constructor gedefinieerd 
 {}
 
 std::string Pallet::getitemName() {
