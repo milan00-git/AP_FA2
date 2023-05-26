@@ -28,4 +28,3 @@ bool Employee::getForkliftCertificate() {
 void Employee::setForkliftCertificate(bool forkliftCertificate) {
     this->forkliftCertificate = forkliftCertificate; //forkliftcertificate zetten op attribute
 }
-

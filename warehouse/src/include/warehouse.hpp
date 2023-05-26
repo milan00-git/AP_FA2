@@ -8,9 +8,10 @@
 class Warehouse
 {
     public: 
-        std::vector<Employee> Employees;
-        std::vector<Shelf> Shelves;
-        Warehouse();
+        std::vector<Employee> Employees; //aantal employees
+        std::vector<Shelf> Shelves; //aantal shelves
+
+        Warehouse(); //default constructor
         void addEmployee(Employee enployee);
         void addShelf(Shelf shelf);
         bool rearrangeShelf(Shelf& shelf);
