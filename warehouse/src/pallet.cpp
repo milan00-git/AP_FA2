@@ -12,7 +12,7 @@ Pallet::Pallet(int itemCount, std::string itemName, int itemCapacity) :
 Pallet::Pallet() //default constructor gedefinieerd 
 {}
 
-std::string Pallet::getitemName() {
+std::string Pallet::getItemName() {
     return itemName;
 }
 

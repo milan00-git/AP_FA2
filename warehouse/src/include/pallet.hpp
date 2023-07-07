@@ -14,7 +14,7 @@ class Pallet : public IContainer //inherit public functies van IContainer
         Pallet(int itemCount, std::string itemName, int itemCapacity); //constructor reordered 
         Pallet();
 
-        std::string getitemName();
+        std::string getItemName();
         int getitemCount();
         int getRemainingSpace();
         bool reallocateEmptyPallet(std::string itemName, int itemCapacity);
