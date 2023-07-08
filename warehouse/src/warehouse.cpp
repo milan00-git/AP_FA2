@@ -21,15 +21,12 @@ void Warehouse::addShelf(Shelf shelf) {
 }
 
 bool Warehouse::rearrangeShelf(Shelf& shelf) {
-    //gebruik swap pallets maar dan voor shelves
-    if (shelf < 0 || shelf >= Shelves.size() || slot2 < 0 || slot2 >= pallets.size()) { 
-        return false; //pallets zijn niet geswapped, output is 0
-    }
-
-    else {
-        std::swap(pallets[slot], pallets[slot2]); //swap de pallets
-        return true; //pallets zijn geswapped, output is 1
-    }
+    /* Functie sorteert pallets in shelf oplopend van volgorde itemcount 
+    1. sorteer de pallets op een shelf op volgorde itemcount, gebruik swappallets functie voor sorteren
+    2. functie kan slagen als een employee een forkliftcertificate heeft
+    */ 
+   for (int i = 0; i < itemCount; )
+   
 }
 
 bool Warehouse::pickItems(std::string itemName, int itemCount) {
