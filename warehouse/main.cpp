@@ -25,7 +25,7 @@ int main(void){
 
     warehouse_shelf.pallets = {p1, p2, p3, p4}; //zet pallets in warehouse_shelf
     warehouse_shelf_2.pallets = {p5, p6, p7}; //zet pallets in warehouse_shelf 2
-    
+
     //warehouse aanmaken
     Warehouse warehouse_1 = Warehouse();
 
@@ -45,41 +45,13 @@ int main(void){
 
     std::cout << warehouse_1.pickItems("appel", 11);
 
-    /*pickitems test*/
-    // if ()
-    // /*
-    // shelf test:
-    // Als een shelf leeg is, zitten er 4 pallets op die een itemcount van 0 hebben. 
-    // De shelf is vol wanneer alle pallets vol zijn.
-    // */
+    /* 
+    shelf test:
+    Als een shelf leeg is, zitten er 4 pallets op die een itemcount van 0 hebben. 
+    De shelf is vol wanneer alle pallets vol zijn. 
+    */
 
-    // //swapped pallets in shelf
-    // // voor de swap
-    //     for (auto& pallet : shelf.pallets) {
-    //         std::cout << pallet.getItemName() << std::endl;
-    //         }
-    //     shelf.swapPallet(0, 1); //swap pallet p1 met p2
-
-    //     for (auto& pallet : shelf.pallets) {
-    //         std::cout << pallet.getItemName() << std::endl;
-    // }
-
-    // for (auto& pallet : shelf.pallets) { //loop over elke pallet in shelf
-    //     //kijk of shelf leeg is, of vol zit
-    //     if (pallet.isEmpty() == false) {
-    //         std::cout << pallet.isEmpty() << " " << "er zitten een paar items in een van de pallets in shelf " << std::endl; 
-                
-    //     }
-
-    //     else if (pallet.isEmpty() == true) {
-    //         std::cout << pallet.isEmpty() << " " << "shelf is leeg" << std::endl;
-    //     }
-        
-    //     else if (pallet.isFull() == true){
-    //         std::cout << pallet.isEmpty() << " " << "shelf zit vol" << std::endl;
-    //     }
-    // }
-    // Employee warehouse_boy = {"Dan", true};
+    
 
     return 0; 
 
